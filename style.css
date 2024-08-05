@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+
+/*--------------------WEBSITE THEME-----------------*/
+
+
+:root {
+    --hue-1: 230;
+    --hue-2: 120;
+
+    --main-color-1: hsl(var(--hue-1), 100%, 60%);
+    --main-color-dark-1: hsl(var(--hue-1), 69%, 50%);
+    --main-color-2: hsl(var(--hue-2), 100%, 61%);
+    --main-color-dark-2: hsl(var(--hue-2), 82%, 55%);
+    --section-padding: 3rem;
+}
+
+body {
+    --bg-colour: hsl(var(--hue-1), 100%, 96%);
+    --bg-colour-1: hsl(var(--hue-1), 100%, 95.5%);
+    --bg-colour-2: #fff;
+    --bg-colour-3: hsl(var(--hue-1), 100%, 98%);
+    --bg-colour-transparent: rgba(255, 255, 255, 0.6);
+    --heading-color: hsl(var(--hue-1), 61%, 24%);
+    --text-color: hsl(var(--hue-1), 17%, 63%);
+
+}
+
+@media screen and (min-width: 1120px) {
+
+    :root {
+        --h2-font-size: 1.5rem;
+        --small-font-size: .875rem;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-colour);
+    font-family: "poppins", sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+body.stopScrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+::selection {
+    background-color: hsla(var(--hue-1), 100%, 60%, 0.9);
+    color: #fff;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* --------------reusable css code----------------------------- */
+
+.section {
+    position: relative;
+    padding: 20px;
+    background: #eaf7ff;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 90rem;
+    padding: 0 1.5rem;
+    margin: 30px auto;
+    /* background: #3646c0; */
+}
+
+.container1 {
+    position: relative;
+    width: 100%;
+    max-width: 90rem;
+    padding: 0 1.5rem;
+    margin: 30px auto;
+    /* background: #3646c0; */
+}
+
+
+.showcase-area {
+    padding: 80px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.showcase-area .container {
+    display: grid;
+    grid-template-columns: 0.55fr 1fr;
+    gap: 3.5rem;
+    height: calc(100vh - 130px);
+    height: 600px;
+    align-items: center;
+}
+
+
+.showcase-area .sub-heading {
+    font-size: 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    width: 250px;
+    letter-spacing: 0.4px;
+    margin: auto;
+
+}
+
+.showcase-area .heading {
+    font-size: 65px;
+    text-align: center;
+    margin: 40px 10px 40px 10px;
+}
+
+.showcase-area .text {
+    margin: 40px 0;
+    text-align: justify;
+
+}
+
+
+.showcase-info {
+    width: 90%;
+}
+
+.showcase-image {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.showcase-image .person {
+    position: relative;
+    width: 820px;
+    left: 45px;
+    top: 20px;
+    align-items: center;
+    background-position: center;
+    border-radius: 20px;
+    transform: translateX(-50%, -50%);
+}
+
+.Our-Environments {
+    padding: 80px 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.Our-Environments .container {
+    display: flex;
+    justify-content: space-evenly;
+    place-items: center;
+    margin-inline: 2.5rem;
+    padding-block: 3rem;
+    align-items: center;
+    height: calc(80vh - 120px);
+    margin: auto;
+}
+
+.Our-Environments .heading {
+    font-size: 70px;
+    text-align: center;
+    margin: 30px 10px 30px 10px;
+}
+
+.Our-Environments .text {
+    margin: 40px 0;
+    text-align: center;
+    font-size: 20px;
+
+
+}
+
+.Our-Environments .card {
+    display: grid;
+    justify-content: space-between;
+    row-gap: 2.5rem;
+    border: none;
+}
+
+.card .card-article {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px black;
+    border-radius: 30px;
+    border: none;
+}
+
+.card img {
+    width: 250px;
+    border-radius: 10px;
+
+}
+
+.intro {
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0.8;
+    transition: opacity 1s 1s;
+}
+
+.intro h1 {
+    background: rgb(0, 0, 0);
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    border: solid 1px rgb(255, 255, 255);
+
+}
+
+.Our-Environments .card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.Content {
+    position: relative;
+    width: 100%;
+    max-width: 90rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.Title {
+    padding: 80px 12px 15px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.Title .Content {
+    position: relative;
+    grid-template-columns: 1fr;
+    height: calc(100% - 130px);
+    height: 600px;
+    align-items: center;
+}
+
+.Content .Content-image {
+    position: relative;
+    width: 100%;
+    min-height: calc(100% + 120px);
+}
+
+.img1 {
+    position: relative;
+    display: block;
+    width: 60%;
+    margin: auto;
+    z-index: 3;
+    margin-top: -80px;
+}
+
+.img2 {
+    display: block;
+    width: 40%;
+    left: 10%;
+    margin-top: 55px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Title .sub-heading {
+    font-size: 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    margin-top: 50px;
+    padding: 15px;
+    width: 260px;
+    letter-spacing: 0.4px;
+    margin: auto;
+    border: none;
+}
+
+/* ---------------------service section---------------------- */
+
+.services .container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.services .container1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5.5rem;
+    align-items: center;
+}
+
+.section {
+    position: relative;
+    padding: var(--section-padding) 0;
+    margin: 20px;
+}
+
+.services .heading {
+    font-size: 70px;
+    text-align: center;
+    margin: 40px 10px 40px 10px;
+}
+
+.section .sub-heading {
+    font-size: 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    width: 230px;
+    letter-spacing: 0.4px;
+}
+
+.section .text {
+    text-align: justify;
+}
+
+.milestones {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.milestones h2 {
+    color: var(--main-color-1);
+    font-size: 1.3rem;
+    transition: 0.3s color;
+
+}
+
+
+.milestones h2 span {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-right: 0.1rem;
+    transition: 0.3s color;
+
+}
+
+.milestones h5 {
+    color: var(--heading-color);
+    line-height: 0.9;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.vr-img1 {
+    width: 520px;
+    padding: 0;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.vr-img2 {
+    position: relative;
+    width:100%;;
+    padding: 0;
+    right: -20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.vr-img3 {
+    width: 700px;
+    padding: 0;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.Medi-info .heading {
+    font-size: 70px;
+    text-align: center;
+    margin: 40px 10px 40px 10px;
+}
+
+.container1 .Medi-info {
+    text-align: center;
+    padding: 0px;
+    margin: 40px 10px 40px 10px;
+}
+
+.Video_detail {
+    width: 24%;
+    background: #000000;
+    position: relative;
+    margin-top: 40px;
+    padding: 10px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.cta {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.cta .btn {
+    margin-right: 1.5rem;
+}
+
+/* ----------------------------video section----------------- */
+.showcase-video {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    min-height: calc(50% + 100px);
+    border-radius: 10px;
+}
+
+.showcase-video .Video {
+    width: 700px;
+    border-radius: 20px;
+}
+
+.showcase-video video {
+    width: 500px;
+}
+
+.buttons {
+    margin-top: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: .9rem 1.75rem;
+    border-radius: 17px;
+    background-color: var(--main-color-1);
+    color: #fff;
+    font-size: 0.85rem;
+    letter-spacing: 0.4px;
+    min-width: 125px;
+    text-align: center;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--main-color-dark-1);
+}
+
+.cta img {
+    position: relative;
+    width: 30px;
+}
+
+.footer img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .logo {
+        font-size: 1.45rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.6rem;
+        font-size: 0.8rem;
+        border-radius: 15px;
+        min-width: 100px;
+    }
+
+    .showcase-area {
+        padding: 2px 20px;
+    }
+
+    .Our-Environments .container {
+        display: flex;
+        place-items: center;
+        height: 450px;
+        justify-content: center;
+
+    }
+
+    .showcase-area .container {
+        grid-template-columns: 1fr 400px;
+        height: 450px;
+    }
+
+    .container1 .Medi-info {
+        text-align: center;
+        padding: 0;
+        margin: 30px 10px 30px 10px;
+    }
+
+    .milestones {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        text-align: center;
+        justify-content: flex-start;
+        margin-top: 50px;
+    }
+
+    .Title .Content {
+        position: relative;
+        grid-template-columns: 1fr;
+        height: calc(100% - 130px);
+        height: 400px;
+        align-items: center;
+    }
+
+
+    .btn {
+        padding: 0.8rem 1.6rem;
+        font-size: 0.8rem;
+        border-radius: 15px;
+        min-width: 100px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-pdding: 4.5rem;
+    }
+
+    .showcase-area .container {
+        grid-template-columns: 1fr;
+        height: revert;
+        justify-content: center;
+        row-gap: 4rem;
+    }
+
+    .services .container1 {
+        grid-template-columns: 1fr;
+        gap: 0rem;
+        align-items: center;
+        left: -8px;
+    }
+
+    .showcase-image {
+        min-height: revert;
+        height: 80vw;
+        max-height: 570px;
+        max-width: 450px;
+        margin-top: 0px;
+        border-radius: 40px;
+    }
+
+    .showcase-image1 {
+        min-height: revert;
+        height: 50vw;
+        max-height: 570px;
+        max-width: 450px;
+        margin-top: 0px;
+        border-radius: 40px;
+    }
+
+    .showcase-video {
+        min-height: revert;
+        height: 45vw;
+        max-height: 570px;
+        max-width: 350px;
+        margin-top: 0px;
+        border-radius: 40px;
+    }
+
+    .Content .Content-image {
+        min-height: revert;
+        position: relative;
+        width: 100%;
+    }
+
+    .showcase-image .person {
+        width: 320px;
+        height: 220px;
+        left: 0;
+        border-radius: 20px;
+
+    }
+
+    .showcase-info {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+
+    .showcase-area .text {
+        margin: 20px 0;
+    }
+
+    .Our-Environments .text {
+        margin: 20px 40px;
+    }
+
+
+    .cta {
+        margin-top: 1rem;
+    }
+
+
+    .showcase-area .circle {
+        width: 120px;
+    }
+
+    .Our-Environments .container {
+        display: grid;
+        place-items: center;
+        margin: auto;
+        height: revert;
+        justify-content: center;
+
+    }
+
+
+    .img1 {
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-top: -80px;
+    }
+
+    .img2 {
+        display: block;
+        width: 80%;
+        left: 10%;
+        margin-top: 55px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .services .text {
+        margin: 1.5rem 0 0.5rem;
+    }
+
+    .services-grid {
+        width: 180px;
+        position: relative;
+        margin: auto;
+        align-items: center;
+    }
+
+    .showcase-image .vr-img1 {
+        width: 280px;
+        padding: 0;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .showcase-image1 .vr-img1 {
+        width: 280px;
+        padding: 0;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .showcase-image1 .vr-img2 {
+        width: 280px;
+        padding: 0;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .showcase-image1 .vr-img3 {
+        width: 280px;
+        padding: 0;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .services .container {
+        grid-template-columns: 1fr;
+        height: revert;
+        justify-content: center;
+        row-gap: 0rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 0 1rem;
+        height: revert;
+        justify-content: center;
+    }
+
+    .showcase-area .square {
+        display: none;
+    }
+
+    .showcase-area .container {
+        row-gap: 1.5rem;
+    }
+
+    .showcase-area .heading {
+        font-size: 45px;
+    }
+
+    .showcase-area .sub-heading {
+        width: 180px;
+        font-size: 12px;
+    }
+
+    .Title .sub-heading {
+        width: 180px;
+        font-size: 12px;
+    }
+
+    .Our-Environments .heading {
+        font-size: 45px;
+    }
+
+    .Our-Environments .container {
+        row-gap: 1.5rem;
+    }
+
+    .section .heading {
+        font-size: 45px;
+        width: 280px;
+        margin: auto;
+        text-align: center;
+        padding: 0;
+
+    }
+
+    .section .sub-heading {
+        font-size: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 180px;
+        letter-spacing: 0.4px;
+    }
+
+
+    .showcase-video .Video {
+        width: 300px;
+        border-radius: 10px;
+        border: none;
+    }
+
+}
